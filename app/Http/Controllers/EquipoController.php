@@ -12,9 +12,15 @@ class EquipoController extends Controller
      */
     public function index()
     {
-        /*$equipos = Equipo::all();
+        $equipos = Equipo::all();
         return view('listaequipo',compact('equipos'));
-        */
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function indexAPI()
+    {
         return Equipo::all();
     }
 

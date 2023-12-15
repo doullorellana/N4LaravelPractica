@@ -12,9 +12,15 @@ class OperadorController extends Controller
      */
     public function index()
     {
-        /*$operadores = Operador::all();
-        return view('listaoperador',compact('operadores'));
-        */
+        $operadores = Operador::all();
+        return view('operador', ['operadores'=>$operadores]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function indexAPI()
+    {
         return Operador::all();
     }
 

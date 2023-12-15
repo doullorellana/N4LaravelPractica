@@ -22,8 +22,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Rutas para los Operadores
 Route::get('/operadores',[OperadorController::class,'index']);
+Route::get('/operadoresapi',[OperadorController::class,'indexAPI']);
 Route::post('/operadores',[OperadorController::class,'store']);
 
 // Rutas para los Equipos
 Route::get('/equipos',[EquipoController::class,'index']);
+Route::get('/equiposapi',[EquipoController::class,'indexAPI']);
 Route::post('/equipos',[EquipoController::class,'store']);

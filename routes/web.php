@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OperadorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/demo', function () {
+    return view('app');
+});
+
+Route::get('/inicio', function() {
+    return view('index');
+});
+
+Route::get('/operador', [OperadorController::class, 'index'])->name('operador');
+
+//Route::get('/listaoperador',[OperadorController::class,'index']);
